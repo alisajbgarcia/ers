@@ -6,7 +6,7 @@ public class Card {
     private boolean faceCard;
     private Rank rank;
 
-    public Card(Colors color, Suits suit, int num, boolean faceCard) {
+    public Card(Colors color, Suits suit, int num) {
         this.color = color;
         this.suit = suit;
         this.num = num;
@@ -20,6 +20,10 @@ public class Card {
                 case 14 -> Rank.ACE;
                 default -> Rank.NUM;
             };
+
+            this.faceCard = true;
+        } else {
+            this.faceCard = false;
         }
     }
 
